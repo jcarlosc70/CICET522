@@ -61,4 +61,41 @@ while count < len(students):
 print(resultado)
 
 # 4.Pantalla por cada estudiante: El estudiante {estudiante} ocupa el lugar {}
+count = 0
+while count < len(students):
+    print(f"el estudiante {students[count]} ocupa la posicion {count} ")
+    count += 1
+
+# 5.Considerando el punto anterior y con la ayuda del operador in mostrar por pantalla:
+
+approved_students = ["Pedro", "Felipe", "Macarena", "Epifanio"]
+
+count = 0
+while count < len(students):
+    if students[count] in approved_students:
+        print(f"El estudiante {students[count]} ha aprobado")
+    else:
+        print(f"El estudiante {students[count]} NO ha aprobado")
+    count += 1
+
+# 6.Permitir al user buscar la posición de un estudiante (Sin list methods)
+user = input("students search: ")
+count = 0
+while count < len(students):
+    if user in students:
+        print(f"el estudiante {user} se encuentra en la posicion {count}")
+        count = len(students) + 1
+    else:
+        print("Estudiante no encontrado")
+    count += 1
+print(students)
+
+# 7.Permitir al user buscar un estudiante y de encontrarlo, preguntar por qué nombre quiere cambiarlo -->
+user = input("students search: ")
+count = 0
+while count < len(students):
+    if user == students[count]:
+        students[count] = input("New Name: ") 
+    count = len(students) + 1
+# print(students)# 4.Pantalla por cada estudiante: El estudiante {estudiante} ocupa el lugar {}
 
