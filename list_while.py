@@ -52,50 +52,79 @@ students = students_backup.copy()
 
 # 3.Cuántos nombres empiezan con la letra "M"?
 
-count = 0
-resultado = 0
-while count < len(students):
-    if students[count].startswith("M"):
-        resultado +=1
-    count += 1
-print(resultado)
+# count = 0
+# resultado = 0
+# while count < len(students):
+#     if students[count].startswith("M"):
+#         resultado +=1
+#     count += 1
+# print(resultado)
 
 # 4.Pantalla por cada estudiante: El estudiante {estudiante} ocupa el lugar {}
-count = 0
-while count < len(students):
-    print(f"el estudiante {students[count]} ocupa la posicion {count} ")
-    count += 1
+# count = 0
+# while count < len(students):
+#     print(f"el estudiante {students[count]} ocupa la posicion {count} ")
+#     count += 1
 
 # 5.Considerando el punto anterior y con la ayuda del operador in mostrar por pantalla:
 
 approved_students = ["Pedro", "Felipe", "Macarena", "Epifanio"]
 
-count = 0
-while count < len(students):
-    if students[count] in approved_students:
-        print(f"El estudiante {students[count]} ha aprobado")
-    else:
-        print(f"El estudiante {students[count]} NO ha aprobado")
-    count += 1
+# count = 0
+# while count < len(students):
+#     if students[count] in approved_students:
+#         # print(f"El estudiante {students[count]} ha aprobado")
+#     else:
+#         # print(f"El estudiante {students[count]} NO ha aprobado")
+#     count += 1
 
 # 6.Permitir al user buscar la posición de un estudiante (Sin list methods)
-user = input("students search: ")
-count = 0
-while count < len(students):
-    if user in students:
-        print(f"el estudiante {user} se encuentra en la posicion {count}")
-        count = len(students) + 1
-    else:
-        print("Estudiante no encontrado")
-    count += 1
-print(students)
+
+# user = input("students search: ")
+# count = 0
+# while count < len(students):
+#     if user in students:
+#         print(f"el estudiante {user} se encuentra en la posicion {count}")
+#         count = len(students) + 1
+#     else:
+#         print("Estudiante no encontrado")
+#     count += 1
+# print(students)
 
 # 7.Permitir al user buscar un estudiante y de encontrarlo, preguntar por qué nombre quiere cambiarlo -->
-user = input("students search: ")
-count = 0
-while count < len(students):
-    if user == students[count]:
-        students[count] = input("New Name: ") 
-    count = len(students) + 1
+
+# user = input("students search: ")
+# count = 0
+# while count < len(students):
+#     if user == students[count]:
+#         students[count] = input("New Name: ") 
+#     count = len(students) + 1
 # print(students)# 4.Pantalla por cada estudiante: El estudiante {estudiante} ocupa el lugar {}
 
+# 8.Permitir al user indicar un nombre de la lista students y así poder unirlo a la lista vacía new_course
+
+# count = 0
+# new_course = []
+# user = input("Estudiante a agregar: ")
+# while count < len(students):
+#     if user == students[count]:
+#         new_course.append(user)
+#     count += 1
+# print(new_course)
+
+print("---Bienvenido a Students App---")
+print("1. Buscar estudiante")
+print("2. Buscar y actualizar estudiante")
+print("3. Para Salir")
+user = input("Elija una opcion: ")
+
+while user != "3":
+    if user == "1":
+        user = input("Estudiante a buscar: ")
+        count = 0
+        while count < len(students):
+            if user == students[students]:
+                print(f"El estudiante {user} se encuentra en la oposicion {count}")
+            count = len(students)
+            count += 1
+    user = input("Y ahora que?: ")
